@@ -10,7 +10,7 @@ export default class StripeAddCard extends Component {
   }
 
   stripe.setOptions({
-    publishableKey: publicStripeKey
+    publishableKey: this.props.publicStripeKey
   })
 
   render() {
