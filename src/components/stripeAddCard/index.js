@@ -32,7 +32,7 @@ export default class StripeAddCard extends Component {
             addressZip: '55555',
           }
           console.log(params)
-          console.log(Stripe.createTokenWithCard(params))
+          console.log(stripe.createTokenWithCard(params))
           return stripe.createTokenWithCard(params)
           //return getCardToken(cardNumber, expiryMonth, expiryYear, cvc, this.props.publicStripeKey).then(token => this.props.addCardTokenHandler(token))
         }}
