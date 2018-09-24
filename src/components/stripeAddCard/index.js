@@ -9,6 +9,10 @@ export default class StripeAddCard extends Component {
     addCardTokenHandler: PropTypes.func.isRequired,
   }
 
+  stripe.setOptions({
+    publishableKey: publicStripeKey
+  })
+
   render() {
     return (
       <AddCard
