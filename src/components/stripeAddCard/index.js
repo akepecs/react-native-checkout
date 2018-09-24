@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import stripe from 'tipsi-stripe'
-
 import AddCard from '../addCard'
 
 export default class StripeAddCard extends Component {
@@ -32,9 +31,9 @@ export default class StripeAddCard extends Component {
             addressCountry: 'Test Country',
             addressZip: '55555',
           }
-          console.log(params);
-          console.log(Stripe.createTokenWithCard(params));
-          return Stripe.createTokenWithCard(params);
+          console.log(params)
+          console.log(Stripe.createTokenWithCard(params))
+          return stripe.createTokenWithCard(params)
           //return getCardToken(cardNumber, expiryMonth, expiryYear, cvc, this.props.publicStripeKey).then(token => this.props.addCardTokenHandler(token))
         }}
       />
