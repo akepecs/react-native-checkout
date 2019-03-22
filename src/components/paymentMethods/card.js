@@ -11,12 +11,12 @@ export default props => (
         <View style={{ flex: 1, flexDirection: 'row' }}>
           <Text style={props.styles.cardTextEndingIn}>Subscribed to</Text>
           <Text style={props.styles.cardTextEndingIn}>{props.paymentSource.planName}</Text>
-          <Text style={props.styles.cardTextEndingIn}>Plan Using</Text>
+          <Text style={props.styles.cardTextEndingIn}>Plan using</Text>
         </View>
         <View style={{ flex: 1, flexDirection: 'row' }}>
-          <Text style={props.styles.cardTextType}>{props.paymentSource.brand}</Text>
+          <Text style={props.styles.cardTextEndingIn}>{props.paymentSource.brand}</Text>
           <Text style={props.styles.cardTextEndingIn}>Ending in</Text>
-          <Text style={props.styles.cardTextLast4}>{props.paymentSource.last4}</Text>
+          <Text style={props.styles.cardTextEndingIn}>{props.paymentSource.last4}</Text>
         </View>
       </View>
     </View>
