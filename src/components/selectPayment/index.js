@@ -12,8 +12,10 @@ export default class SelectPayment extends Component {
     applePayHandler: PropTypes.func,
     paymentSources: PropTypes.array,
     addCardHandler: PropTypes.func.isRequired,
+    changeSubscription: PropTypes.func.isRequired,
     selectPaymentHandler: PropTypes.func.isRequired,
     addNewCardText: PropTypes.string,
+    changeSubscriptionText: PropTypes.string,
     styles: PropTypes.object,
   }
 
@@ -21,6 +23,7 @@ export default class SelectPayment extends Component {
     enableApplePay: false,
     paymentSources: [],
     addNewCardText: 'Add New Card',
+    changeSubscriptionText: 'Change Subscription Plan',
   }
 
   render() {
@@ -36,6 +39,9 @@ export default class SelectPayment extends Component {
         />
         <TouchableOpacity style={styles.addButton} styles={styles} onPress={() => this.props.addCardHandler()} last>
           <Text style={styles.addButtonText}>{this.props.addNewCardText}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.addButton} styles={styles} onPress={() => this.props.changeSubscription()} last>
+          <Text style={styles.addButtonText}>{this.props.changeSubscriptionText}</Text>
         </TouchableOpacity>
       </View>
     )

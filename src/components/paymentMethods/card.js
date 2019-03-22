@@ -7,6 +7,9 @@ export default props => (
   <TouchableOpacity {...props} styles={props.styles} style={props.styles.cardTextOuterContainer} onPress={() => props.selectPaymentHandler(props.paymentSource)}>
     <View style={props.styles.cardTextContainer}>
       <CardBrandImage style={props.styles.cardBrandImage} brand={props.paymentSource.brand} />
+      <Text style={props.styles.cardTextEndingIn}>
+        Subscribed to {props.paymentSource.planName} Using {'\n'}
+      </Text>
       <Text style={props.styles.cardTextType}>{props.paymentSource.brand}</Text>
       <Text style={props.styles.cardTextEndingIn}>Ending in</Text>
       <Text style={props.styles.cardTextLast4}>{props.paymentSource.last4}</Text>

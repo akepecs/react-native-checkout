@@ -27,7 +27,7 @@ export default class StripeAddCard extends Component {
   createToken = async (cardNumber, expiryMonth, expiryYear, cvc) => {
     try {
       stripe.setOptions({
-        publishableKey: 'pk_test_9xsIO3qFWBc4TZkcSlctpaQc',
+        publishableKey: this.props.publicStripeKey,
       })
 
       var token = await stripe.createTokenWithCard({
