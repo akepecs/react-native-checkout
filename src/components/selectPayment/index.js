@@ -37,11 +37,11 @@ export default class SelectPayment extends Component {
           enableApplePay={this.props.enableApplePay}
           styles={styles}
         />
-        <TouchableOpacity style={styles.addButton} styles={styles} onPress={() => this.props.addCardHandler()} last>
-          <Text style={styles.addButtonText}>{this.props.addNewCardText}</Text>
-        </TouchableOpacity>
         <TouchableOpacity style={styles.addButton} styles={styles} onPress={() => this.props.changeSubscription()} last>
           <Text style={styles.addButtonText}>{this.props.changeSubscriptionText}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.addButton} styles={styles} onPress={() => this.props.addCardHandler()} last>
+          <Text style={styles.addButtonText}>{this.props.addNewCardText}</Text>
         </TouchableOpacity>
       </View>
     )
